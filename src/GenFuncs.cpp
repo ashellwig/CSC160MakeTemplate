@@ -1,7 +1,7 @@
 #include "GenFuncs.h"
 #include <iostream>
 
-int GenFuncs::xpPause()
+int GenFuncs::pauseprompt()
 {
     std::cout << "Press enter to continue..." << std::endl;
     std::cin.ignore();

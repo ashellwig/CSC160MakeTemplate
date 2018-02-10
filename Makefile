@@ -12,6 +12,7 @@ TGT = obj
 INCLUDES = -Iinclude
 DBGOUT = target/debug
 RELOUT = target/release
+UDOCDIR = DOC/assigned
 # Compiler
 CXX = g++
 CXXFLAGSREL = -Wall -std=c++17 -O2 $(INCLUDES)
@@ -32,8 +33,11 @@ clean-all: clean-all-dbg clean-all-rel
 
 
 # Debug
-debug: $(TGT)/debug/Chapter5-DBG
+## Run
+run-debug: debug
+	$(DBGOUT)/Chapter5-Debug.exe
 ## Build
+debug: $(TGT)/debug/Chapter5-DBG
 $(TGT)/debug/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGSDBG) -c $< -o $@
 $(TGT)/debug/Chapter5-DBG: $(DBGOBJS)
@@ -47,8 +51,11 @@ clean-all-dbg:
 
 
 # Release
-release: $(TGT)/release/Chapter5-REL
+## Run
+run-release: release
+	$(RELOUT)/Chapter5-Release.exe
 ## Build
+release: $(TGT)/release/Chapter5-REL
 $(TGT)/release/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGSREL) -c $< -o $@
 $(TGT)/release/Chapter5-REL: $(RELOBJS)
@@ -59,3 +66,20 @@ clean-rel:
 ## Removes binaries and object files for release builds
 clean-all-rel:
 	rm -rf $(TGT)/release/*.o $(RELOUT)/*.exe
+
+
+# TODO: Doc
+## Assigned
+### Build
+# user-doc-build: $(UDOCDIR)/%.tex
+# $(UDOCDIR)/%.tex:
+# 	@texify --synctex --pdf --tex-option="-interaction=nonstopmode" \
+# 	--tex-option="-file-line-error" "$(UDOCDIR)/userdocs.tex"
+### Clean
+#user-doc-clean:
+#	rm -rf \
+#	$(UDOCDIR)/*.aux $(UDOCDIR)/*.bbl $(UDOCDIR)/*.blg $(UDOCDIR)/*.idx \
+#	$(UDOCDIR)/*.ind $(UDOCDIR)/*.lof $(UDOCDIR)/*.lot $(UDOCDIR)/*.out \
+#	$(UDOCDIR)/*.toc $(UDOCDIR)/*.acn $(UDOCDIR)/*.acr $(UDOCDIR)/*.alg \
+#	$(UDOCDIR)/*.glg $(UDOCDIR)/*.glo $(UDOCDIR)/*.gls $(UDOCDIR)/*.ist \
+#	$(UDOCDIR)/*.fls $(UDOCDIR)/*.log $(UDOCDIR)/*.fdblatexmk
