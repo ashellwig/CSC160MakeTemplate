@@ -3,7 +3,7 @@
 class GenFuncs
 {
 public:
-    static int xpPause();
+    static int pauseprompt();
 };
 
 #endif

@@ -16,5 +16,13 @@
       },
       "problemMatcher": "$gcc"
     }
+    {
+      "label": "clean all",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "clean-all"
+      ]
+    }
   ]
 }

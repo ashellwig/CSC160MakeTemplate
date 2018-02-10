@@ -5,9 +5,8 @@
 ##
 
 # Tex
-DOC/*
-!DOC/userdocs.tex
-
+DOC/assigned/userdocs.*
+!DOC/assigned/userdocs.tex
 # CPP
 target/debug/*
 target/release/*

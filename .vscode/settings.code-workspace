@@ -4,5 +4,14 @@
 			"path": "../"
 		}
 	],
-	"settings": {}
+	"settings": {
+		/* C and C++ */
+		"C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+    "C_Cpp.clang_format_style": "Visual Studio",
+    "[cpp]": {
+        "editor.autoIndent": true,
+				"editor.tabSize": 4,
+				"editor.insertSpaces": true
+		}
+	}
 }
