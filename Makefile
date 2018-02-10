@@ -31,22 +31,6 @@ clean-all-obj: clean-dbg clean-rel
 ## Removes object files and binaries
 clean-all: clean-all-dbg clean-all-rel
 
-# Doc
-## Assigned
-user-doc-build: $(UDOCDIR)/%.tex
-
-$(UDOCDIR)/%.tex:
-	texify --synctex --pdf --tex-option="-interaction=nonstopmode" \
-	--tex-option="-file-line-error" "$(UDOCDIR)/userdocs.tex"
-
-user-doc-clean:
-	rm -rf \
-	$(UDOCDIR)/*.aux $(UDOCDIR)/*.bbl $(UDOCDIR)/*.blg $(UDOCDIR)/*.idx \
-	$(UDOCDIR)/*.ind $(UDOCDIR)/*.lof $(UDOCDIR)/*.lot $(UDOCDIR)/*.out \
-	$(UDOCDIR)/*.toc $(UDOCDIR)/*.acn $(UDOCDIR)/*.acr $(UDOCDIR)/*.alg \
-	$(UDOCDIR)/*.glg $(UDOCDIR)/*.glo $(UDOCDIR)/*.gls $(UDOCDIR)/*.ist \
-	$(UDOCDIR)/*.fls $(UDOCDIR)/*.log $(UDOCDIR)/*.fdblatexmk
-
 
 # Debug
 ## Run
@@ -82,3 +66,20 @@ clean-rel:
 ## Removes binaries and object files for release builds
 clean-all-rel:
 	rm -rf $(TGT)/release/*.o $(RELOUT)/*.exe
+
+
+# TODO: Doc
+## Assigned
+### Build
+# user-doc-build: $(UDOCDIR)/%.tex
+# $(UDOCDIR)/%.tex:
+# 	@texify --synctex --pdf --tex-option="-interaction=nonstopmode" \
+# 	--tex-option="-file-line-error" "$(UDOCDIR)/userdocs.tex"
+### Clean
+#user-doc-clean:
+#	rm -rf \
+#	$(UDOCDIR)/*.aux $(UDOCDIR)/*.bbl $(UDOCDIR)/*.blg $(UDOCDIR)/*.idx \
+#	$(UDOCDIR)/*.ind $(UDOCDIR)/*.lof $(UDOCDIR)/*.lot $(UDOCDIR)/*.out \
+#	$(UDOCDIR)/*.toc $(UDOCDIR)/*.acn $(UDOCDIR)/*.acr $(UDOCDIR)/*.alg \
+#	$(UDOCDIR)/*.glg $(UDOCDIR)/*.glo $(UDOCDIR)/*.gls $(UDOCDIR)/*.ist \
+#	$(UDOCDIR)/*.fls $(UDOCDIR)/*.log $(UDOCDIR)/*.fdblatexmk

@@ -7,6 +7,8 @@
 # Tex
 DOC/assigned/userdocs.*
 !DOC/assigned/userdocs.tex
+!DOC/assigned/userdocs.pdf
+
 # CPP
 target/debug/*
 target/release/*

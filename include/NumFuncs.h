@@ -3,7 +3,7 @@
 class NumFuncs
 {
 public:
-
+    static int promptuser();
 };
 
 #endif
