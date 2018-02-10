@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.28)  9 FEB 2018 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.28)  9 FEB 2018 23:11
 entering extended mode
 **"o:/OneDrive - Colorado Community College System/CSC160/Programs/Module-3/Cha
-pter5/DOC/userdocs.tex"
+pter5-Make/DOC/userdocs.tex"
 
 ("o:/OneDrive - Colorado Community College System/CSC160/Programs/Module-3/Chap
-ter5/DOC/userdocs.tex"
+ter5-Make/DOC/userdocs.tex"
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Users\hellw\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -553,12 +553,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
  9631 strings out of 493312
- 140920 string characters out of 3129827
+ 140975 string characters out of 3129827
  294600 words of memory out of 3000000
  13018 multiletter control sequences out of 15000+200000
  9805 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,11n,51p,336b,1402s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,11n,51p,341b,1402s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/hellw/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/hellw/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/hellw/AppData/Local/Programs/MiKTeX 2.9/f
