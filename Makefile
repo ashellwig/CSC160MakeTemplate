@@ -32,8 +32,11 @@ clean-all: clean-all-dbg clean-all-rel
 
 
 # Debug
-debug: $(TGT)/debug/Chapter5-DBG
+## Run
+run-debug: debug
+	$(DBGOUT)/Chapter5-Debug.exe
 ## Build
+debug: $(TGT)/debug/Chapter5-DBG
 $(TGT)/debug/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGSDBG) -c $< -o $@
 $(TGT)/debug/Chapter5-DBG: $(DBGOBJS)
@@ -47,8 +50,11 @@ clean-all-dbg:
 
 
 # Release
-release: $(TGT)/release/Chapter5-REL
+## Run
+run-release: release
+	$(RELOUT)/Chapter5-Release.exe
 ## Build
+release: $(TGT)/release/Chapter5-REL
 $(TGT)/release/%.o: $(SRC)/%.cpp
 	$(CXX) $(CXXFLAGSREL) -c $< -o $@
 $(TGT)/release/Chapter5-REL: $(RELOBJS)
