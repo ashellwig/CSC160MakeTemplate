@@ -1,0 +1,218 @@
+%
+% Module 2 Chapter 4 Homework
+% CSC160-C00: Computer Science I (C++)
+% Author: Ashton Hellwig
+%
+
+
+\documentclass[a4paper]{article}
+
+
+  % Packages
+  \usepackage[english]{babel}       % Internationalization
+  \usepackage{soul}                 % Highlighting
+  \usepackage{hyperref}             % Links (internal and external)
+  \usepackage{fancyhdr}             % Headers and footers
+  \usepackage[dvipsnames]{xcolor}   % Text Colors
+  \usepackage{listings}             % Code Snippets
+  \usepackage{algorithmicx}         % Algorithmic notation support
+	\usepackage{algpseudocode}        % Algorithmic notation environments
+	\usepackage{enumitem}             % Ordered lists
+  \usepackage{geometry}             % Page layout
+  \usepackage{graphicx}             % Image support
+  \usepackage[toc, page]{appendix}  % Appendix
+  \usepackage{amsmath}              % Mathematical Typesetting
+
+
+  % Colors
+  \newcommand{\commentstylecolor}{\color{Gray}}
+  \newcommand{\keywordstylecolor}{\color{MidnightBlue}}
+  \newcommand{\stringstylecolor}{\color{ForestGreen}}
+  \newcommand{\questioninput}{\color{Red}}
+  \newcommand{\answertcolor}{\color{Green}}
+  \newcommand{\myanswer}{\answertcolor{\hl}}
+
+
+  % Image Directory
+  \graphicspath{ {screenshots/} }
+
+
+  % Hyperlink Setup
+  \hypersetup{
+    colorlinks = true,
+    urlcolor = blue,
+    linkcolor = blue
+  }
+
+
+  % Syntax-Highlighting for Code Snippets
+  \lstset{
+    backgroundcolor=\color{white},
+    breaklines=true,%
+    captionpos=b,%
+    frame=tb,%
+    tabsize=4,%
+    numbers=left,%
+    showstringspaces=false,%
+    commentstyle=\commentstylecolor,%
+    keywordstyle=\keywordstylecolor,%
+    stringstyle=\stringstylecolor%
+  }
+
+
+  % Page Configuration
+  %% Style
+  \pagestyle{fancy}
+
+  %% Layout
+  \geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+  }
+  \setlength{\headheight}{12pt}
+  \setlength{\floatsep}{12pt}
+
+  %% Title page
+  \title{Chapter 5 Program Documentation}
+  \author{Ashton Hellwig}
+  \date\today
+  \setcounter{tocdepth}{3}
+
+  %% Subsequent pages
+  \lhead{CSC160}
+  \rhead{Computer Science I (C++)}
+  \lfoot{M2C5P}
+  \rfoot{A. Hellwig}
+
+
+  % Document Content
+\begin{document}
+  % Title Page
+  \maketitle
+  \tableofcontents
+  \listoffigures
+  \newpage
+
+
+  % Problem Analysis
+  \section{Problem Analysis}
+    The problem states:
+    \begin{quotation}
+      Write a program that uses \textbf{while} loops to perform the following:
+      \begin{enumerate}
+        \item Prompt the user to input two integers: firstNum and secondNum
+          (firstNum must be less than secondNum).
+        \item Output all odd numbers between firstNum and secondNum.
+        \item Output the sum of all even numbers between firstNum and secondNum.
+        \item Output the numbers and their squares between 1 and 10.
+        \item Output the sum of the square of the odd numbers between firstNum
+          and secondNum.
+        \item Output all uppercase letters.
+      \end{enumerate}
+    \end{quotation}
+
+    \subsection{Data}
+      Available data includes:
+      \begin{enumerate}
+        \item There are two variables: \texttt{firstNum} and \texttt{secondNum}
+        \item \texttt{firstNum} must always be less than \texttt{secondNum}
+      \end{enumerate}
+
+    \subsection{Desired Output}
+      \begin{figure}[h]
+        \caption{main.cpp output}
+        \begin{lstlisting}[language=bash]
+Odd numbers between firstNum and secondNum:
+Sum of even numbers between firstNum and secondNum:
+firstNum =
+\tfirstNumSquares between 1 and 10: 
+secondNum =
+\tsecondNumSquares between 1 and 10:
+The sum of the square of the odd numbers between firstNum and secondNum =
+All uppercase letters used were:
+        \end{lstlisting}
+        \label{fig:do}
+      \end{figure}
+
+
+  % Algorithm
+  \newpage
+  \section{Algorithm}
+    Below is the algorithm for the program.
+    \begin{figure}[h]
+      \caption{Chapter 5 Program Algorithm}
+      \vspace{12pt}
+      \begin{algorithmic}
+        %% Variables
+        \State \Comment{--Variables--}
+        \State 
+        \State $firstNum\gets $
+          \Comment{Needs user input}
+        \State $secondNum\gets $
+          \Comment{Needs user input}
+        %% Prompt Lines
+        \State \Comment{--Prompt Lines--}
+        \State \Call{toOutput}{} ``Please enter the values for firstNum''
+          \State $firstNum\gets input$
+        \State \Call{toOutput}{} ``Please enter the values for secondNum''
+          \State $secondNum\gets input$
+      \end{algorithmic}
+      \label{alg:c5}
+    \end{figure}
+
+
+  % User Documentation
+  \newpage
+  \section{User Documentation}
+
+    %% Usage
+    \subsection{Build}
+      The following are instructions with two use cases:
+      \begin{itemize}
+        \item Within Visual Studio 2017
+        \item Bundled Release
+        \item with GNU G++
+      \end{itemize}
+      \subsubsection{Within Visual Studio}
+        Simply load \texttt{Chapter5.sln} in Microsoft Visual Studio and 
+          build/run the \texttt{release} version. If you require debugging
+          information, switch the configuration to \texttt{debug}.
+      \subsubsection{Bundled Release}
+        \begin{enumerate}
+          \item Navigate to the unziped folder containing the binary, 
+            \textbf{with a terminal emulator or command prompt}, this will
+            (most likely) mean running:
+            \begin{lstlisting}[language=bash]
+              cd %USERPROFILE%\Downloads\Chapter5\x64\Release\
+            \end{lstlisting}
+          \item To run the program simply issue this within the command
+            prompt
+            \begin{lstlisting}[language=bash]
+              .\Chapter5.exe
+            \end{lstlisting}
+        \end{enumerate}
+        Of course if preferred, you may also navigate to the release folder in
+          file explorer and double click the executable (\texttt{Chapter4.exe})
+      \subsection{With g++}
+        If you prefer to use an open source debugger and compiler then I assume
+          the following:
+          \begin{enumerate}
+            \item You have installed \href{http://www.mingw.org/}{MinGW} and
+              it is in your \texttt{\$PATH}
+            \item You have installed the
+            \href{http://www.mingw.org/wiki/MSYS}{MSYS Tools} and they are in
+              your \texttt{\$PATH}
+          \end{enumerate}
+
+
+  % Appendix
+  \newpage
+  \appendix
+
+  % Appendix A
+  \section{Appendix A}
+
+\end{document}
