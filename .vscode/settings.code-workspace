@@ -12,6 +12,19 @@
         "editor.autoIndent": true,
 				"editor.tabSize": 4,
 				"editor.insertSpaces": true
-		}
+		},
+		"latex-workshop.latex.toolchain": [
+			{
+				"command": "latexmk",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"-pdf",
+					"%DOC%"
+				]
+			}
+		],
+		"latex-workshop.latex.outputDir": "${workspaceRoot}/DOC"
 	}
 }
