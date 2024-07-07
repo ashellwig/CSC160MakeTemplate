@@ -1,0 +1,55 @@
+repo_name: ashellwig/CSC160MakeTemplate
+report_id: 6058caa4dd4718e9ba5aba0f96b93a87
+version: 0.1
+repo_type: Public
+timestamp: '2024-07-07T04:21:25+00:00'
+requested_by: ashellwig
+provider: github
+branch: master
+detected_tools_count: 4
+tools:
+- name: C++
+  description: Has imperative, object-oriented and generic programming features, while
+    also providing the facilities for low level memory manipulation
+  website_url: http://www.cplusplus.com/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1049/cplusplus.png
+  detection_source_url: https://github.com/ashellwig/CSC160MakeTemplate
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ashellwig/CSC160MakeTemplate
+  detection_source: Repo Metadata
+- name: Visual Studio Code
+  description: Build and debug modern web and cloud applications, by Microsoft
+  website_url: https://code.visualstudio.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Text Editor
+  image_url: https://img.stackshare.io/service/4202/Visual_Studio_Code_logo.png
+  detection_source_url: https://github.com/ashellwig/CSC160MakeTemplate/blob/master/.vscode/tasks.json
+  detection_source: ".vscode/tasks.json"
+  last_updated_by: Ashton Hellwig
+  last_updated_on: 2018-02-10 06:15:51.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/ashellwig/CSC160MakeTemplate
+  detection_source: Repo Metadata
